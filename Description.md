@@ -3,7 +3,7 @@
 
 ![](RackMultipart20200510-4-nf69to_html_f73d958e0a43c848.gif) **CH 1: Domain &amp; historical Analysis**
 
-**\Overview of the product,**
+**Overview of the product,**
 
 PuTTY is a free and open-source terminal emulator, serial console and network file transfer application. It supports several network protocols, including SCP, SSH, Telnet, rlogin, and raw socket connection. It can also connect to a serial port. The name &quot;PuTTY&quot; has no official meaning.
 
@@ -61,23 +61,23 @@ Putty (software) generally has two purposes.
 
 1. Used as a File Transfer Protocol.
 
--\ Most of the hosting services, both online and offline are built on LINUX OS, rightly so because it provides better safety for client data. Especially when thousands of clients data stored in a single place safety is the first priority.
+- Most of the hosting services, both online and offline are built on LINUX OS, rightly so because it provides better safety for client data. Especially when thousands of clients data stored in a single place safety is the first priority.
 
--\ However this poses a greater challenge for non-LINUX OS users to deal with. Here comes the third party applications like PuTTy which enables non-Linux users install this particular software (PuTTy), and interact with Linux servers from a non-Linux OS
+- However this poses a greater challenge for non-LINUX OS users to deal with. Here comes the third party applications like PuTTy which enables non-Linux users install this particular software (PuTTy), and interact with Linux servers from a non-Linux OS
 
--\ Interface of PuTTy is similar to windows terminal, However user need to be aware of Linux commands to interact with it
+- Interface of PuTTy is similar to windows terminal, However user need to be aware of Linux commands to interact with it
 
--\ PuTTy provides various File transfer features like FTP and SFTP depending on user&#39;s security requirements.
+- PuTTy provides various File transfer features like FTP and SFTP depending on user&#39;s security requirements.
 
 2. Used to generate Hash key
 
--\PuTTy also used to generate SSH keys. Nowadays using passwords are prone to security threats especially when you are dealing with a lot of confidential data online. PuTTy allows you to generate a series of keys. Which is a combination of hundreds of Alphanumeric and special characters, which is almost impossible to crack
+- PuTTy also used to generate SSH keys. Nowadays using passwords are prone to security threats especially when you are dealing with a lot of confidential data online. PuTTy allows you to generate a series of keys. Which is a combination of hundreds of Alphanumeric and special characters, which is almost impossible to crack
 
--\SSH generates two types of key combinations i.Public key which is used to access the terminal by authorized people, And Private key which should not be shared with anyone, Private Key is encrypted into the particular server of the user which can only be opened with a public key
+- SSH generates two types of key combinations i.Public key which is used to access the terminal by authorized people, And Private key which should not be shared with anyone, Private Key is encrypted into the particular server of the user which can only be opened with a public key
 
--\ When you&#39;re using a particular system to access a server you can just point to the public key and you can login to the server any time without entering any password or user nsme
+- When you&#39;re using a particular system to access a server you can just point to the public key and you can login to the server any time without entering any password or user nsme
 
--\One place where i particularly found the use of PuTTy is &quot;Digital Ocean hosting services&quot;
+- One place where i particularly found the use of PuTTy is &quot;Digital Ocean hosting services&quot;
 
 **Current usage of the product,**
 
@@ -136,7 +136,7 @@ PuTTY is more than just an SSH client. It supports all of the following protocol
 
 In addition to the five protocols supported by PuTTY, it also supports features such as saved session configurations, session logging, locale (language) settings, and proxy sessions.
 
-**\\Overview of findings**
+**Overview of findings**
 
 **How good this tool based on,**
 
@@ -229,7 +229,7 @@ This exploitation is hard to identify and also this will initiate remotely. As w
 The best way to mitigate this is upgrading putty to version 0.71. This will eliminate this vulnerability.
 
 
-**\\Product Asset,**
+**Product Asset,**
 
 **Internal Libraries,**
 
@@ -277,7 +277,7 @@ These libraries are used to manipulate connections between computers or servers.
 
 **Sandbox** → this tool is not a sandbox but it can make a connection into the shell based sandbox.
 
-**\\Example attack**
+**Example attack**
 
 ![](Images/5.png)
 
@@ -289,7 +289,7 @@ Some attackers break into one server and gain access for root privilege users. A
 
 ![](RackMultipart20200510-4-nf69to_html_873cd7ce262b62b7.gif) **CH: 2 Design Analysis**
 
-**\\Architecture Overview**
+**Architecture Overview**
 
 ![](RackMultipart20200510-4-nf69to_html_16907029d8e4b797.gif) 
 
@@ -399,21 +399,21 @@ If our memory block is full, we can double the size of that memory block by call
 
 Ex:-
 
-void push(int \*arr, int index, int value, int \*size, int \*capacity){
+>void push(int \*arr, int index, int value, int \*size, int \*capacity){
 
-if(\*size \ \*capacity){
+>if(\*size \ \*capacity){
 
-realloc(arr, sizeof(arr) \* 2);
+>realloc(arr, sizeof(arr) \* 2);
 
-\*capacity = sizeof(arr) \* 2;
+>\*capacity = sizeof(arr) \* 2;
 
-}
+>}
 
-arr[index] = value;
+>arr[index] = value;
 
-\*size = \*size + 1;
+>\*size = \*size + 1;
 
-}
+>}
 
 In the &quot;request\_paste()&quot; method there is a created function but its return value is not used anywhere in the program.
 
