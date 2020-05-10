@@ -1,12 +1,9 @@
-# PuTTy
-PuTTy, windows SSH client and about it's few vulnerabilities.
-
 # **Secure Software Engineering**
 
 
 ![](RackMultipart20200510-4-nf69to_html_f73d958e0a43c848.gif) **CH 1: Domain &amp; historical Analysis**
 
-**\&gt;\&gt;Overview of the product,**
+**\Overview of the product,**
 
 PuTTY is a free and open-source terminal emulator, serial console and network file transfer application. It supports several network protocols, including SCP, SSH, Telnet, rlogin, and raw socket connection. It can also connect to a serial port. The name &quot;PuTTY&quot; has no official meaning.
 
@@ -64,29 +61,29 @@ Putty (software) generally has two purposes.
 
 1. Used as a File Transfer Protocol.
 
--\&gt; Most of the hosting services, both online and offline are built on LINUX OS, rightly so because it provides better safety for client data. Especially when thousands of clients data stored in a single place safety is the first priority.
+-\ Most of the hosting services, both online and offline are built on LINUX OS, rightly so because it provides better safety for client data. Especially when thousands of clients data stored in a single place safety is the first priority.
 
--\&gt; However this poses a greater challenge for non-LINUX OS users to deal with. Here comes the third party applications like PuTTy which enables non-Linux users install this particular software (PuTTy), and interact with Linux servers from a non-Linux OS
+-\ However this poses a greater challenge for non-LINUX OS users to deal with. Here comes the third party applications like PuTTy which enables non-Linux users install this particular software (PuTTy), and interact with Linux servers from a non-Linux OS
 
--\&gt; Interface of PuTTy is similar to windows terminal, However user need to be aware of Linux commands to interact with it
+-\ Interface of PuTTy is similar to windows terminal, However user need to be aware of Linux commands to interact with it
 
--\&gt; PuTTy provides various File transfer features like FTP and SFTP depending on user&#39;s security requirements.
+-\ PuTTy provides various File transfer features like FTP and SFTP depending on user&#39;s security requirements.
 
 2. Used to generate Hash key
 
--\&gt;PuTTy also used to generate SSH keys. Nowadays using passwords are prone to security threats especially when you are dealing with a lot of confidential data online. PuTTy allows you to generate a series of keys. Which is a combination of hundreds of Alphanumeric and special characters, which is almost impossible to crack
+-\PuTTy also used to generate SSH keys. Nowadays using passwords are prone to security threats especially when you are dealing with a lot of confidential data online. PuTTy allows you to generate a series of keys. Which is a combination of hundreds of Alphanumeric and special characters, which is almost impossible to crack
 
--\&gt;SSH generates two types of key combinations i.Public key which is used to access the terminal by authorized people, And Private key which should not be shared with anyone, Private Key is encrypted into the particular server of the user which can only be opened with a public key
+-\SSH generates two types of key combinations i.Public key which is used to access the terminal by authorized people, And Private key which should not be shared with anyone, Private Key is encrypted into the particular server of the user which can only be opened with a public key
 
--\&gt; When you&#39;re using a particular system to access a server you can just point to the public key and you can login to the server any time without entering any password or user nsme
+-\ When you&#39;re using a particular system to access a server you can just point to the public key and you can login to the server any time without entering any password or user nsme
 
--\&gt;One place where i particularly found the use of PuTTy is &quot;Digital Ocean hosting services&quot;
+-\One place where i particularly found the use of PuTTy is &quot;Digital Ocean hosting services&quot;
 
 **Current usage of the product,**
 
-# As an SSH client on Windows, The SSH protocol was developed as a secure, encrypted replacement for the RSH protocol. RSH is used for remote shell access to a UNIX (or UNIX-like) system and was once popular among sysadmins before network security became the constant concern it is now. Now, thanks to SSH, the same convenience can be had with an encrypted protocol famous for its versatility and strong security. While OpenSSH is probably the most-used implementation of SSH in the world, PuTTY is likely the most-used SSH client for the MS Windows platform.
+As an SSH client on Windows, The SSH protocol was developed as a secure, encrypted replacement for the RSH protocol. RSH is used for remote shell access to a UNIX (or UNIX-like) system and was once popular among sysadmins before network security became the constant concern it is now. Now, thanks to SSH, the same convenience can be had with an encrypted protocol famous for its versatility and strong security. While OpenSSH is probably the most-used implementation of SSH in the world, PuTTY is likely the most-used SSH client for the MS Windows platform.
 
-# In a multi-user operating system like [Unix](https://en.wikipedia.org/wiki/Unix), the interface is generally of command-line type, just like the command prompt or MS-DOS. As such the user needs to type in the command in the command line program to get anything processed by the system. Generally, these commands can quickly be run over a network from a different computer on a different location (client) and the response is transferred over the network to the client. The arrangement mentioned above is made possible with the help of network protocols like SSH, Telnet, Rlogin, etc. Interestingly, users can give commands to multiple computers simultaneously.
+In a multi-user operating system like [Unix](https://en.wikipedia.org/wiki/Unix), the interface is generally of command-line type, just like the command prompt or MS-DOS. As such the user needs to type in the command in the command line program to get anything processed by the system. Generally, these commands can quickly be run over a network from a different computer on a different location (client) and the response is transferred over the network to the client. The arrangement mentioned above is made possible with the help of network protocols like SSH, Telnet, Rlogin, etc. Interestingly, users can give commands to multiple computers simultaneously.
 
 SSH (Secure Shell) protocol is a cryptographic network protocol that allows you to access an internet server while encrypting any information sent to that server. Some of the other protocols include Telnet, Rlogin only if either you are connected to a UNIX system or you have a login account on a web server (a shell account). [PuTTY](https://en.wikipedia.org/wiki/PuTTY) is one such application that enables this kind of transfer.
 
@@ -139,15 +136,17 @@ PuTTY is more than just an SSH client. It supports all of the following protocol
 
 In addition to the five protocols supported by PuTTY, it also supports features such as saved session configurations, session logging, locale (language) settings, and proxy sessions.
 
-**\&gt;\&gt;Overview of findings**
+**\\Overview of findings**
 
 **How good this tool based on,**
 
 Mainly this particular tool is used to get remote access into the servers and PCs in the network. By using IP address and ports or else IP address and connection type users can access into the endpoint. 
-	![](Images/1.png)
+
+![](Images/1.png)
 
 After this phase it will prompt the terminal to log into the relevant device. User needs to input credentials to connect. 
-	![](Images/2.png)
+
+![](Images/2.png)
 
 **Confidentiality** : This is really protected because of the login. There is specific login to the relevant device. But if there is no specific login is a huge problem because those servers or PCs can store confidential details. All the data sent under the encryption mechanism.
 
@@ -161,11 +160,11 @@ After this phase it will prompt the terminal to log into the relevant device. Us
 
 **Accountability** : There is an option for creating logs of the current session in Putty. Also users can have access to that saved log again and check session details.
 
-	![](Images/3.png)
+![](Images/3.png)
 
 **Vulnerabilities,**
 
-	![](Images/4.PNG)
+![](Images/4.PNG)
 
 All the vulnerabilities in the above table are fixed.
 
@@ -230,21 +229,21 @@ This exploitation is hard to identify and also this will initiate remotely. As w
 The best way to mitigate this is upgrading putty to version 0.71. This will eliminate this vulnerability.
 
 
-**\&gt;\&gt;Product Asset,**
+**\\Product Asset,**
 
 **Internal Libraries,**
 
 Using standard C libraries.
 
-#include \&lt;stdio.h\&gt;
+#include \<stdio.h\>
 
-#include \&lt;stdlib.h\&gt;
+#include \<stdlib.h\>
 
-#include \&lt;stdarg.h\&gt;
+#include \<stdarg.h\>
 
-#include \&lt;assert.h\&gt;
+#include \<assert.h\?
 
-#include \&lt;limits.h\&gt;
+#include \<limits.h\>
 
 These are used to manipulate inputs/outputs, as well as to get common functions which are using in the C language, such as &quot;strcpy()&quot;.
 
@@ -252,17 +251,17 @@ These are used to manipulate inputs/outputs, as well as to get common functions 
 
 Used customized libraries.
 
-#include &quot;putty.h&quot;
+#include <putty.h>
 
-#include &quot;psftp.h&quot;
+#include <psftp.h>
 
-#include &quot;storage.h&quot;
+#include <storage.h>
 
-#include &quot;ssh.h&quot;
+#include <ssh.h>
 
-#include &quot;sftp.h&quot;
+#include <sftp.h>
 
-#include &quot;int64.h&quot;
+#include <int64.h>
 
 These libraries are used to manipulate connections between computers or servers.
 
@@ -278,9 +277,9 @@ These libraries are used to manipulate connections between computers or servers.
 
 **Sandbox** → this tool is not a sandbox but it can make a connection into the shell based sandbox.
 
-**\&gt;\&gt;Example attack**
+**\\Example attack**
 
-	![](Images/5.png)
+![](Images/5.png)
 
 In larger scale organizations, there are more than 10000 SSH keys.
 
@@ -290,9 +289,11 @@ Some attackers break into one server and gain access for root privilege users. A
 
 ![](RackMultipart20200510-4-nf69to_html_873cd7ce262b62b7.gif) **CH: 2 Design Analysis**
 
-**\&gt;\&gt;Architecture Overview**
+**\\Architecture Overview**
 
-![](RackMultipart20200510-4-nf69to_html_16907029d8e4b797.gif) ![](Images/6.png)
+![](RackMultipart20200510-4-nf69to_html_16907029d8e4b797.gif) 
+
+![](Images/6.png)
 
 Putty is used to make remote connections to servers or else PCs in the network. It is a SSH client for the user&#39;s Windows machine.
 
@@ -355,13 +356,14 @@ All the inputs and outputs are exchanged with the secure network condition. All 
 
 Putty is a free open source customer application generally used to interface with SSH servers, for example, firewalls and different machines. Putty is signed into the servers or different applications by utilizing SSH. It is an application layer convention and can move records safely also. To give solid security SSH utilizes encryption, authentication and integrity. SSH is the safe substitution to Telnet and FTP when utilizing the SCP. The issue with both Telnet and FTP are, both utilize clear content and don&#39;t give any legitimacy.
 
-	![](Images/7.jpg)
+![](Images/7.jpg)
 
 
-**\&gt;\&gt;Threat model**
+**\\Threat model**
 
 Threat model Diagram:
-	![](Images/8.jpg)
+
+![](Images/8.jpg)
 
 **Misuse cases or abuse separated storage,**
 
@@ -385,7 +387,7 @@ Putty is written in the C language. But also there are few python files. The lat
 
 **Selected File:: window.c**
 
-	![](Images/9.png)
+![](Images/9.png)
 
 In this &quot;start\_backend()&quot; method they are using a fixed size character array called &quot;msg[1024]&quot;. This will be a problem because the array size is fixed. For fixed arrays can be overflow in the C language. And also some attackers can inject remote code which is doing malicious tasks into this kind of variables or arrays. This can be vulnerable to buffer overflow attack as well as remote code execution attack.
 
@@ -399,7 +401,7 @@ Ex:-
 
 void push(int \*arr, int index, int value, int \*size, int \*capacity){
 
-if(\*size \&gt; \*capacity){
+if(\*size \ \*capacity){
 
 realloc(arr, sizeof(arr) \* 2);
 
@@ -415,19 +417,19 @@ arr[index] = value;
 
 In the &quot;request\_paste()&quot; method there is a created function but its return value is not used anywhere in the program.
 
-	![](Images/10.png)
+![](Images/10.png)
 
 This &quot;CreateThread()&quot; is a returning value which is not used. This is one of the bad practices from the developer. If we are not using that relevant value, not returning is the best practice.
 
 In &quot;write\_aclip()&quot; method, there is a mismatching argument type in the print statement. That is also a bad practice and in some cases this can cause an attack as well(but not guaranteed).
 
-	![](Images/11.png)
+![](Images/11.png)
 
 In here &quot;blen &quot; variable is %d in format string requires &#39;int&#39; but the argument type is &#39;signed wchar\_t&#39;. [invalidPrintfArgType\_sint].
 
 And also in this function there is a memory leak in the code segment.
 
-	![](Images/12.png)
+![](Images/12.png)
 
 In here clipdata will leak on that return statement. So this is a code error. To fix this we can handle that return values with some useful functions.
 
@@ -435,13 +437,13 @@ In here clipdata will leak on that return statement. So this is a code error. To
 
 In &quot;struct handle \*handle\_input\_new()&quot; there is a created thread which is mentioned below.
 
-	![](Images/13.png)
+![](Images/13.png)
 
 This method will return some value but it is not used inside the whole file and not even stored in a variable. This is bad practice. Best practice is using that value to get useful action. At Least developers should store this value in the variable. It will be better to ignore this return value.
 
 In &quot;DWORD WINAPI handle\_input\_threadfunc()&quot; , there is a variable which is not initialized. This is bad practice and also it will generate errors in the compiling time.
 
-	![](Images/14.png)
+![](Images/14.png)
 
 &quot;oev&quot; variable which is in this while loop is not initialized. This should be initialized. Otherwise someone can use this variable for other purposes.
 
@@ -451,13 +453,13 @@ One of the main files in the whole system and this is common for any platform.
 
 In &quot;ssh\_special()&quot; there is a condition which is always true. That will be a problem because there is no handled state for the else part. So developers should handle it. Otherwise someone can manually add another part to perform some malicious task(There are no such cases like that. But this can happen if someone thinks differently) . Code is mentioned below.
 
-	![](Images/15.png)
+![](Images/15.png)
 
 This code segment hasn&#39;t any else part and also it is always true.
 
 In &quot;ssh2\_pkt\_getbool()&quot;, either the condition &#39;if(pktin)&#39; is redundant or there is possible null pointer dereference: pkt. [nullPointerRedundantCheck]. This difference invariably results in the failure of the process.
 
-	![](Images/16.png)
+![](Images/16.png)
 
 This can cause &quot;Miscalculated null termination&quot; and &quot;State synchronization error&quot;. This can be controlled, if all pointers that could have been modified are sanity-checked previous to use, can cause to prevent these kinds of vulnerabilities.
 
@@ -465,7 +467,7 @@ This can cause &quot;Miscalculated null termination&quot; and &quot;State synchr
 
 This file is used as Putty SFTP client, which is transferring files in between computers securely by using SSH connection. So this is another important file inside the Putty source.
 
-	![](Images/17.png)
+![](Images/17.png)
 
 In &quot;sftp\_cmd\_cd()&quot;, Either the condition &#39;!dir&#39; is redundant or there is a possible null pointer dereference: dir. [nullPointerRedundantCheck].
 
@@ -480,7 +482,5 @@ PuTTY is a terminal emulator. A Terminal emulator is a software program, also re
 PuTTY is currently a beta software. Licensed under the MIT License, and it is free and open source software. This is categorized as a terminal emulator. This was maintained and was written by Simon Tatham, maintained by a small team based in Cambridge, England. Latest version released on 2019-09-29 PuTTY 0.73. Initial establishment happened in January 8, 1999, 21 years ago, which written by c language also contains more than 300 files. Used as a File Transfer Protocol and also used to generate hash key. PuTTY is more than just an SSH client. It supports rlogin, serial, SSH, Telnet, raw protocols. In addition to the five protocols supported by PuTTY, it also supports features such as saved session configurations, session logging, locale (language) settings, and proxy sessions.
 
 Mainly this particular tool is used to get remote access into the servers and PCs in the network. By using IP address and ports or else IP address and connection type users can access into the endpoint. So when it comes to security 6 components confidentiality, integrity, availability, authentication, authorization, and accountability protect by this system.
-
-19
 
 
